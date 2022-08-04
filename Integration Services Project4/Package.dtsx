@@ -11,8 +11,8 @@
   DTS:LocaleID="1049"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="83"
-  DTS:VersionGUID="{E5BB6F3A-637D-4F2C-AA2A-E7ABEA4D20C0}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{50562388-5D81-4462-A4AA-53A32EDBE339}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -433,7 +433,6 @@
       DTS:refId="Package\Delete staging table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Задача &quot;Выполнение SQL&quot;"
-      DTS:Disabled="True"
       DTS:DTSID="{e7f82f6a-929b-463e-9561-b8282096d50f}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1076,6 +1075,10 @@
           Id="Package\Create staging tables"
           TopLeft="108,82" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\Delete staging table"
+          TopLeft="903,92" />
+        <NodeLayout
           Size="203,42"
           Id="Package\Loading into staging as is"
           TopLeft="363,86" />
@@ -1127,10 +1130,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Delete staging table"
-          TopLeft="903,92" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="857,111.5">
