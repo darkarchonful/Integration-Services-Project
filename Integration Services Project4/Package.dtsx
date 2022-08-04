@@ -1,0 +1,1223 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/24/2022 5:21:38 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-V7STVIE"
+  DTS:CreatorName="DESKTOP-V7STVIE\darkarchon"
+  DTS:DTSID="{4303C20D-12A3-45C6-AA8E-733C4C530930}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.521.0"
+  DTS:LocaleID="1049"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="83"
+  DTS:VersionGUID="{E5BB6F3A-637D-4F2C-AA2A-E7ABEA4D20C0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[dBASE Files]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{EF37E425-10AA-46E5-9E08-D2FB9BED059D}"
+      DTS:ObjectName="dBASE Files">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=dBASE Files;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D679E8CE-0BCE-4D98-AFFD-C55C3B4F81EE}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\darka\Desktop\1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{41746E65-4F6D-4905-B5FE-8937B5B91D42}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1049"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="E:\downloads\order_extract.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1"
+              DTS:DTSID="{7EDA9CB1-31E8-4A43-9EA6-21915751DDA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stavanger"
+              DTS:DTSID="{6B05EC23-9752-4F7D-B1BE-C2E773458ED1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2015-01-01 00 00 00 "
+              DTS:DTSID="{B1D9CC48-127F-4E7A-8B60-4362E7CC086E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3DEA3F60-E046-4753-811F-67E0C499BB0B}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1049"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="ord_2">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Invoice"
+              DTS:DTSID="{0339356C-DEBA-4C04-B29B-3F7EACA5A5CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InvoiceDate"
+              DTS:DTSID="{636ACD44-D329-4FAE-BA5A-6F1747318BA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockCode"
+              DTS:DTSID="{68207F00-6920-4BC7-96D2-2788ADCEF911}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{DE0EEE30-D8EC-4712-90DC-2E9AE418197E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{D6B98143-50AF-44CF-9D38-BBC5F6242C3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{F4FEF153-B6B7-42EA-BDE8-E6650014A999}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_ID"
+              DTS:DTSID="{D9447948-A255-4827-8A11-B213E698F7A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{69021755-C1BF-4705-A7A3-6AAAF2E17DC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{AE5FB718-D991-427B-8EF0-704DB48F7A27}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost\MSSQLSERVER01.test_db]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C35BF5BA-261F-4281-A3D1-CEB8DCB01996}"
+      DTS:ObjectName="localhost\MSSQLSERVER01.test_db">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost\MSSQLSERVER01;Initial Catalog=test_db;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[online_retail_data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7A8E191C-3ADB-4E23-9B23-1142D1E3B28D}"
+      DTS:ObjectName="online_retail_data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1049"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="E:\downloads\online_retail_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Invoice"
+              DTS:DTSID="{1520E39E-B109-4DD9-93C7-717DC53639A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockCode"
+              DTS:DTSID="{BBB63B78-C895-4FAA-A85E-B9A270407CD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{12AFA5F1-605C-448C-A196-350F562A5975}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{C304252F-944D-4141-9665-E8474259B5CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InvoiceDate"
+              DTS:DTSID="{DC677836-04DF-42BF-9E7F-276A0D6F6499}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{595C9A85-BD25-4B76-811D-5AD8EC6E1C80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer ID"
+              DTS:DTSID="{C20ACA65-1F43-47C2-9B89-AF8410C73CEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{6C720ABE-0338-45FC-BDE1-47B9571853FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{9C901AD2-EC36-40A0-8436-87D9416B32FD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ord_3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{571EEF5D-169F-4636-9D89-2A60C948A1A3}"
+      DTS:ObjectName="ord_3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1049"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1251"
+          DTS:ConnectionString="E:\downloads\ord_3.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Столбец 0"
+              DTS:DTSID="{E4D6F3AD-CBF5-40EB-97BF-516BF70C22D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Invoice"
+              DTS:DTSID="{8686B8DE-479E-40FB-BAD4-D2C9C0F3A544}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="InvoiceDate"
+              DTS:DTSID="{402336F9-72F8-461D-B5A7-F05DB695125F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockCode"
+              DTS:DTSID="{36B958E1-FD99-4DED-961E-FD4039C2F0DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{D44F78C1-9CAA-45EF-A567-E30644C6AA6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{4943324F-E9BB-4184-A8FC-51C3EED83AB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Price"
+              DTS:DTSID="{463772C7-9620-41A5-8CE3-3B54F85BD049}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerId"
+              DTS:DTSID="{18A96656-1BA5-4559-BF77-25F69943385F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{2E1C442E-A415-4616-9248-726AB04CA1C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{874CDF57-121E-4597-9FC1-B51B806F9E53}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0A165DEA-4119-4469-AD7E-5D8D7B8FF5C3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="count">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create staging tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{395B6E7C-2181-4AFA-819D-B39EF7104ECE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create staging tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 CTP2.0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C35BF5BA-261F-4281-A3D1-CEB8DCB01996}"
+          SQLTask:SqlStatementSource="drop table if exists online_retail_data_staging;&#xA;create table online_retail_data_staging&#xA;(&#xA;Invoice &#x9;&#x9;&#x9;varchar(max),&#xA;InvoiceDate&#x9;&#x9;varchar(max),&#xA;StockCode&#x9;&#x9;varchar(max),&#xA;Description&#x9;&#x9;varchar(max),&#xA;Quantity&#x9;&#x9;&#x9;varchar(max),&#xA;Price&#x9;&#x9;&#x9;varchar(max),&#xA;CustomerId&#x9;&#x9;varchar(max),&#xA;Country&#x9;&#x9;&#x9;varchar(max),&#xA;Channel&#x9;&#x9;&#x9;varchar(max)&#xA;);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete staging table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:Disabled="True"
+      DTS:DTSID="{e7f82f6a-929b-463e-9561-b8282096d50f}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete staging table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 CTP2.0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C35BF5BA-261F-4281-A3D1-CEB8DCB01996}"
+          SQLTask:SqlStatementSource="drop table if exists online_retail_data_staging" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Loading into staging as is"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Задача потока данных"
+      DTS:DTSID="{FC78AA53-B9FF-46F8-9DF0-A11E12EBC735}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loading into staging as is"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Источник &quot;Неструктурированный файл&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;1"
+              description="Источник &quot;Неструктурированный файл&quot;"
+              localeId="1049"
+              name="Источник &quot;Неструктурированный файл&quot;"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, считается ли, что столбцы нулевой длины имеют значение NULL."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя файла выходного столбца, содержащего имя файла. Если не указано имя, выходной столбец, содержащий имя файла, не будет сформирован."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ord_3]"
+                  connectionManagerRefId="Package.ConnectionManagers[ord_3]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;]"
+                  name="Выход источника &quot;Неструктурированный файл&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[InvoiceDate]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[InvoiceDate]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[InvoiceDate]"
+                      name="InvoiceDate"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Invoice]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Invoice]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Invoice]"
+                      name="Invoice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[StockCode]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[StockCode]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[StockCode]"
+                      name="StockCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Description]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Description]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Quantity]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Quantity]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Price]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Price]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Price]"
+                      name="Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Country]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Channel]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Channel]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Channel]"
+                      name="Channel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[CustomerId]"
+                      codePage="1251"
+                      dataType="str"
+                      errorOrTruncationOperation="Преобразование"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[CustomerId]"
+                      length="50"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[CustomerId]"
+                      name="CustomerId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, используются ли в столбце более производительные, не зависящие от локалей процедуры синтаксического анализа."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Указывает, являются ли данные двоичными."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Invoice]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Invoice" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[StockCode]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="StockCode" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Description]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Quantity]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[InvoiceDate]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="InvoiceDate" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Price]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Country]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Channel]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[Столбец 0]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="Столбец 0" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].ExternalColumns[CustomerId]"
+                      codePage="1251"
+                      dataType="str"
+                      length="50"
+                      name="CustomerId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;]"
+                  isErrorOut="true"
+                  name="Вывод ошибок источника &quot;Неструктурированный файл&quot;">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
+                      codePage="1251"
+                      dataType="text"
+                      description="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;]"
+                      name="Столбец вывода ошибок источника &quot;Неструктурированный файл&quot;" />
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Вывод ошибок источника &quot;Неструктурированный файл&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Назначение &quot;OLE DB&quot;;Корпорация Майкрософт. Microsoft SQL Server. (C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены. http://www.microsoft.com/sql/support;4"
+              description="Назначение &quot;OLE DB&quot;"
+              name="Назначение &quot;OLE DB&quot;"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Время ожидания команды, в секундах. Величина 0 означает неограниченное время ожидания."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowset">[dbo].[online_retail_data_staging]</property>
+                <property
+                  dataType="System.String"
+                  description="Указывает переменную, содержащую имя объекта базы данных, используемого для открытия набора строк."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Команда SQL для выполнения."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает кодовую страницу столбца, используемую, когда недоступны сведения о кодовой странице из источника данных."
+                  name="DefaultCodePage">1251</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Вызывает безусловное использование значение свойства DefaultCodePage при описании символьных данных."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Указывает используемый режим доступа к базе данных."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, должны ли значения в столбцах идентификаторов копироваться в назначение. Если свойство имеет значение false, значения в столбцах идентификаторов будут созданы автоматически в месте назначения. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Указывает, будут ли в назначение вставляться значения NULL для столбцов, содержащих их. Значение false показывает, что если столбец имеет значение NULL, то в назначение будет вставлено его значение по умолчанию. Применяется только в случае, если включена быстрая загрузка."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Задает параметры быстрой загрузки. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Задает, когда выдаются сообщения о фиксации транзакции в ходе вставки данных. Значение 0 задает, что по окончании вставки данных будет выдано одно сообщение о фиксации транзакции. Применяется только в том случае, если включена быстрая загрузка."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost\MSSQLSERVER01.test_db]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost\MSSQLSERVER01.test_db]"
+                  description="Соединение OLE DB среды выполнения, используемое для доступа к базе данных."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+                  errorOrTruncationOperation="Вставить"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Вход назначения &quot;OLE DB&quot;">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[InvoiceDate]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="InvoiceDate"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[InvoiceDate]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[InvoiceDate]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Invoice]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Invoice"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Invoice]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Invoice]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[StockCode]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StockCode"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[StockCode]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[StockCode]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Description]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Description]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Quantity]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Price]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Price"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Price]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Country]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Country]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[Channel]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Channel]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].Columns[CustomerId]"
+                      cachedCodepage="1251"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CustomerId"
+                      externalMetadataColumnId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CustomerId]"
+                      lineageId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;].Columns[CustomerId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[InvoiceDate]"
+                      codePage="1251"
+                      dataType="text"
+                      name="InvoiceDate" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Invoice]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Invoice" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[StockCode]"
+                      codePage="1251"
+                      dataType="text"
+                      name="StockCode" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Description]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Quantity]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Price]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Price" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Country]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[Channel]"
+                      codePage="1251"
+                      dataType="text"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;].ExternalColumns[CustomerId]"
+                      codePage="1251"
+                      dataType="text"
+                      name="CustomerId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Вывод ошибок назначения &quot;OLE DB&quot;"
+                  synchronousInputId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Outputs[Вывод ошибок назначения &quot;OLE DB&quot;].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Loading into staging as is.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+              endId="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;.Inputs[Вход назначения &quot;OLE DB&quot;]"
+              name="Выход источника &quot;Неструктурированный файл&quot;"
+              startId="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;.Outputs[Выход источника &quot;Неструктурированный файл&quot;]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transform and load to product table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Задача &quot;Выполнение SQL&quot;"
+      DTS:DTSID="{3A786F86-36AB-4862-8907-48006853D935}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transform and load to product table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 CTP2.0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C35BF5BA-261F-4281-A3D1-CEB8DCB01996}"
+          SQLTask:SqlStatementSource="drop table if exists online_retail_data&#xA;create table online_retail_data&#xA;(&#xA;Invoice&#x9;&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;InvoiceDate datetimeoffset&#x9;&#x9;not null,&#xA;StockCode&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;Description&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;Quantity&#x9;int&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;,&#xA;Price&#x9;&#x9;float&#x9;&#x9;&#x9;&#x9;&#x9;,&#xA;CustomerId&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;Country&#x9;&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;Channel&#x9;&#x9;varchar(max)&#x9;&#x9;&#x9;,&#xA;)&#xA;&#xA;INSERT INTO online_retail_data  &#xA;(&#xA;Invoice&#x9;&#x9;,&#xA;InvoiceDate ,&#xA;StockCode&#x9;,&#xA;Description&#x9;,&#xA;Quantity&#x9;,&#xA;Price&#x9;&#x9;,&#xA;CustomerId&#x9;,&#xA;Country&#x9;&#x9;,&#xA;Channel&#x9;&#x9;&#xA;)&#xA;select &#xA;&#x9;Invoice&#x9;&#x9;,&#xA;&#x9;InvoiceDate ,&#xA;&#x9;StockCode&#x9;,&#xA;&#x9;Description&#x9;,&#xA;&#x9;Quantity&#x9;,&#xA;&#x9;Price&#x9;&#x9;,&#xA;&#x9;CustomerId&#x9;,&#xA;&#x9;Country&#x9;&#x9;,&#xA;&#x9;Channel&#x9;&#x9;&#xA;from online_retail_data_staging&#xA;where Description not like '?%'&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF0314CE-CBB5-4383-8FCC-D2457F7C8DBB}"
+      DTS:From="Package\Create staging tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Loading into staging as is" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{56783B00-6C12-49C6-B211-ED94D788129D}"
+      DTS:From="Package\Loading into staging as is"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Transform and load to product table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1D0BAFCC-3855-4C4B-AC16-BEF9B26B95BA}"
+      DTS:From="Package\Transform and load to product table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Delete staging table" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Create staging tables"
+          TopLeft="108,82" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Loading into staging as is"
+          TopLeft="363,86" />
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Transform and load to product table"
+          TopLeft="604,89" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="291,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72,0"
+              Start="0,0"
+              End="64.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="566,108.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38,0"
+              Start="0,0"
+              End="30.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="30.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Delete staging table"
+          TopLeft="903,92" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="857,111.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46,0"
+              Start="0,0"
+              End="38.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loading into staging as is">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;"
+          TopLeft="181,220" />
+        <NodeLayout
+          Size="283,42"
+          Id="Package\Loading into staging as is\Источник &quot;Неструктурированный файл&quot;"
+          TopLeft="148.5,72.5" />
+        <EdgeLayout
+          Id="Package\Loading into staging as is.Paths[Выход источника &quot;Неструктурированный файл&quot;]"
+          TopLeft="290,114.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13,105.5"
+              Start="0,0"
+              End="-13,98">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.75"
+                    Point2="0,52.75"
+                    Point3="-4,52.75" />
+                  <mssgle:LineSegment
+                    End="-9,52.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9,52.75"
+                    Point2="-13,52.75"
+                    Point3="-13,56.75" />
+                  <mssgle:LineSegment
+                    End="-13,98" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loading into staging as is\Назначение &quot;OLE DB&quot;">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
